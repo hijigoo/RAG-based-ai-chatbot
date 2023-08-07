@@ -1,0 +1,44 @@
+.article {
+    padding: 28px 28px 28px 286px;
+}
+
+.custom-header {
+    padding-bottom: 28px;
+}
+
+.custom-feeds-container {
+    flex: 1;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+    padding: 3px;
+}
+
+.custom-event-you a {
+    color: #FE9A76;
+}
+
+.custom-event-ai {
+    background-color: #f2f2f2 !important;
+}
+
+.content{
+    margin: 12px;
+}
+.custom-extra-text {
+    width: 100%;
+    max-width: 100% !important;
+    padding-right: 56px !important;
+}
+
+.custom-footer {
+    padding-top: 28px;
+    /*width: inherit !important;*/
+}
+
+.custom-input-box {
+    width: 100%
+}
+
+.custom-del-button {
+    color: #B03060;
+}

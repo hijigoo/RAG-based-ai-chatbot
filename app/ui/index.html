@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/base-ui.css">
+  <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  <script src="/static/semantic.min.js"></script>
+  <script src="/static/base-ui.js"></script>
+  <title>GenAI(Q&A) with Bedrock</title>
+</head>
+
+<body>
+
+<div class="ui vertical menu sidebar visible left overlay">
+  <div class="item">
+    <!--    <a class="ui logo icon image" href="/">-->
+    <!--      <img src="/images/logo.png">-->
+    <!--    </a>-->
+    <H3><i class="file icon"></i><b>Documents</b></H3>
+  </div>
+  <div class="item">
+    <div class="ui fluid selection dropdown" id="custom-documents-selection">
+      <i class="dropdown icon"></i>
+      <div class="default text">reference document</div>
+      <div class="menu" id="custom-indices-dropdown-menu">
+        <!--        <div class="item" data-value="1">Male</div>-->
+        <!--        <div class="item" data-value="0">Female</div>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <H3><i class="upload icon"></i><b>Upload</b></H3>
+  </div>
+  <div class="item">
+    <form class="ui form">
+      <!--            <h4 class="ui dividing header">name</h4>-->
+      <div class="field">
+        <input class="" type="file" id="custom-file-input">
+      </div>
+      <div class="field">
+        <label>name</label>
+        <input id="custom-doc-name-input" type="text" name="document[name]" placeholder="name">
+      </div>
+      <!--        <h4 class="ui dividing header">chunk size / overly size</h4>-->
+      <div class="two fields">
+        <div class="field">
+          <label>chunk size</label>
+          <input id="custom-doc-chunk-input" type="text" name="document[chunk-size]" placeholder="chunk size" value=1000
+                 maxlength=15>
+        </div>
+        <div class="field">
+          <label>chunk overlap</label>
+          <input id="custom-doc-overlap-input" type="text" name="document[overlap-size]" placeholder="chunk overlap"
+                 value=0>
+        </div>
+      </div>
+    </form>
+    <button id="custom-doc-upload" class="ui fluid primary basic button">
+      Upload
+    </button>
+  </div>
+
+  <div class="item">
+    <H3><i class="trash alternate icon"></i><b>Delete</b></H3>
+  </div>
+  <div class="item">
+    <div class="ui divided selection list" id="custom-documents-deletion">
+      <!--      <a class="item">-->
+      <!--        <div class="ui orange horizontal label">DEL</div>-->
+      <!--        Kumquats-->
+      <!--      </a>-->
+      <!--      <a class="item">-->
+      <!--        <div class="ui orange horizontal label">DEL</div>-->
+      <!--        Ice Cream-->
+      <!--      </a>-->
+      <!--      <a class="item">-->
+      <!--        <div class="ui orange horizontal label">DEL</div>-->
+      <!--        Orange-->
+      <!--      </a>-->
+      <!--      <a class="item">-->
+      <!--        <div class="orange red horizontal label">DEL</div>-->
+      <!--        Poodle-->
+      <!--      </a>-->
+    </div>
+  </div>
+  <div class="item">
+    <H3><i class="hourglass outline icon"></i><b>Progress</b></H3>
+  </div>
+  <div class="item">
+    <div class="ui centered inline loader" id="custom-progress-icon"></div>
+  </div>
+</div>
+<div class="article">
+
+  <div class="ui container">
+    <div class="custom-header">
+      <h1 class="ui header" style="font-size: 3em;">GenAI(Q&A) with Bedrock</h1>
+    </div>
+
+    <div class="ui container custom-feeds-container" id="custom-feeds-container">
+      <!--      <div class="">-->
+      <div class="ui feed" id="custom-feeds">
+        <div class="event custom-event-ai">
+          <!--            <div class="label">-->
+          <!--              <img src="/images/avatar/small/joe.jpg">-->
+          <!--            </div>-->
+          <div class="content">
+            <div class="summary">
+              <a>AI</a>
+            </div>
+            <div class="extra text custom-extra-text">
+              Hello! :)
+            </div>
+<!--            <div class="meta">-->
+<!--            </div>-->
+          </div>
+        </div>
+
+      </div>
+      <!--      </div>-->
+    </div>
+
+    <div class="ui container custom-footer">
+      <div class="ui action input custom-input-box">
+        <input id="custom-question-input" type="text" placeholder="Question...">
+        <button class="ui button" id="custom-send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>
