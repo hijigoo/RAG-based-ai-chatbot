@@ -12,7 +12,11 @@ service = 'es'  # must set the service as 'es'
 
 # 권한이 있는 Task Role 을 ECS Task 에 등록 하고, OpenSearch 에 Task Role 을 맵핑해서 사용
 credentials = boto3.Session().get_credentials()
-awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
+awsauth = AWS4Auth(
+    region=region,
+    service=service,
+    refreshable_credentials=credentials)
+
 
 def get_opensearch_client():
     return OpenSearch(
