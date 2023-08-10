@@ -25,19 +25,19 @@ Amazon Bedrock을 이용해서 응답을 생성하고, [Amazon OpenSearch](https
 
 ## Sequence Diagram
 ### Store Documents 
+참고할 문서를 Chunk 단위로 나누고 Embedding Vector 로 변환하여 원본과 함께 저장합니다
 <img width="530" alt="app-architecture-sequence-01" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/7b8ac95a-7a9e-486d-8511-ef727a2d68dd">
 
-참고할 문서를 Chunk 단위로 나누고 Embedding Vector 로 변환하여 원본과 함께 저장합니다
 
 ### Delete Document
+저장된 문서와 Embedding Vector 를 제거합니다.
 <img width="580" alt="app-architecture-sequence-02" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/06290527-3d6e-4511-8c43-87a133b12faf">
 
-저장된 문서와 Embedding Vector 를 제거합니다.
 
 ### Get Answer
+질문과 연관된 문서를 찾아서 Prompt 를 만들어서 응답을 생성하는데 사용합니다.
 <img width="530" alt="app-architecture-sequence-03" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/7245ad04-765c-4c7c-8573-277f172c5203">
 
-질문과 연관된 문서를 찾아서 Prompt 를 만들어서 응답을 생성하는데 사용합니다.
 
 ## References
 https://github.com/kyopark2014/simple-chatbot-using-LLM-based-on-amazon-bedrock
