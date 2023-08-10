@@ -40,6 +40,6 @@ Amazon Bedrock을 이용해서 응답을 생성하고, [Amazon OpenSearch](https
 
 
 ## References
-https://github.com/kyopark2014/simple-chatbot-using-LLM-based-on-amazon-bedrock
-https://github.com/aws-samples/amazon-bedrock-workshop
-https://aws.amazon.com/ko/blogs/big-data/amazon-opensearch-services-vector-database-capabilities-explained/
+- https://github.com/kyopark2014/simple-chatbot-using-LLM-based-on-amazon-bedrock
+- https://github.com/aws-samples/amazon-bedrock-workshop
+- https://aws.amazon.com/ko/blogs/big-data/amazon-opensearch-services-vector-database-capabilities-explained/
