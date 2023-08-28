@@ -2,7 +2,7 @@
 [Amazon Bedrock](https://aws.amazon.com/bedrock/) 으로 RAG(retrieval augmented generation) Chatbot을 제작한 프로젝트입니다. 본 프로젝트를 이용해서 사용자는 LLM 모델을 사용해서 질문에 대한 응답을 생성할 수 있습니다. 또한 참고할 문서를 업로드 하고, 응답 생성시 참고하여 문서의 도메인 특화된 응답을 얻을 수 있습니다.  
 
 ## Cloud Architecture
-<img width="424" alt="cloud-architecture-01" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/2dcb5789-4bad-4af2-aa1b-6b97ff977201">
+<img width="787" alt="cloud-architecture-02" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/f33fa6c6-48e7-409a-b745-ce6364e33bd6">
 
 Amazon Bedrock을 이용해서 응답을 생성하고, [Amazon OpenSearch](https://docs.aws.amazon.com/opensearch-service/index.html)를 이용해서 문서와 임베딩 벡터 값을 저장합니다. Frontend 와 Backend가 포함된 본 애플리케이션은 [Amazon ECS](https://aws.amazon.com/ko/ecs/)에 배포되어 운영됩니다.
 
