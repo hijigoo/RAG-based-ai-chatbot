@@ -1,6 +1,22 @@
 # RAG-based-ai-chatbot
 [Amazon Bedrock](https://aws.amazon.com/bedrock/) 으로 RAG(retrieval augmented generation) Chatbot을 제작한 프로젝트입니다. 본 프로젝트를 이용해서 사용자는 LLM 모델을 사용해서 질문에 대한 응답을 생성할 수 있습니다. 또한 참고할 문서를 업로드 하고, 응답 생성시 참고하여 문서의 도메인 특화된 응답을 얻을 수 있습니다.  
 
+## Command
+### Docker build
+```
+docker buildx build --no-cache --platform=linux/amd64 -t qarag .
+```
+
+### Docker tag
+```
+docker tag qarag:latest [ACCOUNT ID].dkr.ecr.us-west-2.amazonaws.com/qarag:latest
+```
+
+### Docker push
+```
+docker push [ACCOUNT ID].dkr.ecr.us-west-2.amazonaws.com/qarag:latest  
+```
+
 ## Cloud Architecture
 <img width="787" alt="cloud-architecture-02" src="https://github.com/hijigoo/RAG-based-ai-chatbot/assets/1788481/f33fa6c6-48e7-409a-b745-ce6364e33bd6">
 
