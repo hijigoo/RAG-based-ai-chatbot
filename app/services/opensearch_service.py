@@ -6,7 +6,8 @@ from requests_aws4auth import AWS4Auth
 from langchain.embeddings.base import Embeddings
 
 region = 'us-west-2'
-endpoint_url = 'https://search-doc-vector-store-d6ewfi4eflxfciyyticvh5zm5m.us-west-2.es.amazonaws.com'
+# endpoint_url = 'https://search-doc-vector-store-d6ewfi4eflxfciyyticvh5zm5m.us-west-2.es.amazonaws.com'
+endpoint_url = 'https://vpc-doc-vector-store-vpc-44f2zwlvjspbifxgg33tf74dou.us-west-2.es.amazonaws.com'
 
 service = 'es'  # must set the service as 'es'
 
