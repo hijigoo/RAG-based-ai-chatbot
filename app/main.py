@@ -5,7 +5,6 @@ from fastapi import FastAPI, Request, UploadFile
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from mangum import Mangum
 
 import generator
 import retriever
@@ -80,7 +79,10 @@ async def get_answer_with_document(document: str, question: str, k: int = 0):
         result['result'] = answer
         result['reference_documents'] = []
     else:
-        result = generator.generate_answer_with_retrieval_by_chain(index_name=document, question=question, k=k)
+        answer, docs = generator.generate_answer_with_retrieval(index_name=document, question=question, k=k)
+        result['query'] = question
+        result['result'] = answer
+        result['source_documents'] = docs
         result['reference_documents'] = []
         for doc in result['source_documents']:
             result['reference_documents'].append({"content": doc.page_content, "metadata": doc.metadata})
@@ -93,5 +95,3 @@ async def get_answer_with_document(document: str, question: str, k: int = 0):
 async def read_item(request: Request, id: str):
     return templates.TemplateResponse("item.html", {"request": request, "id": id})
 
-
-lambda_handler = Mangum(app)

@@ -1,9 +1,11 @@
 uvicorn==0.23.2
+boto3==1.28.62
 fastapi==0.100.1
-langchain==0.0.253
+langchain==0.0.352
 opensearch-py==2.3.0
 pypdf==3.15.0
 Jinja2==3.1.2
 aiofiles==23.1.0
 requests-aws4auth==1.2.3
 python-multipart==0.0.6
+pdfplumber==0.10.3

@@ -10,9 +10,14 @@ class MyTestCase(unittest.TestCase):
         print('models: ', model_info)
 
     def test_get_bedrock_llm_response(self):
-        model_id = 'amazon.titan-tg1-large'
+        model_id = "anthropic.claude-v2:1"
         llm = get_bedrock_model(model_id=model_id)
-        response = llm('What is Operational excellence?')
+        prompt_data = f"""
+
+Human: 너 이름이 뭐야
+
+Assistant:"""
+        response = llm(prompt_data)
         print(response)
 
     def test_get_bedrock_embeddings(self):

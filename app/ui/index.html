@@ -50,7 +50,7 @@
       <div class="two fields">
         <div class="field">
           <label>chunk size</label>
-          <input id="custom-doc-chunk-input" type="text" name="document[chunk-size]" placeholder="chunk size" value=1000
+          <input id="custom-doc-chunk-input" type="text" name="document[chunk-size]" placeholder="chunk size" value=5000
                  maxlength=15>
         </div>
         <div class="field">
@@ -113,7 +113,7 @@
             <div class="summary">
               <a>AI</a>
             </div>
-            <div class="extra text custom-extra-text">
+            <div class="extra text custom-extra-text custom-chat-text">
               Hello! :)
             </div>
 <!--            <div class="meta">-->
@@ -127,7 +127,7 @@
 
     <div class="ui container custom-footer">
       <div class="ui action input custom-input-box">
-        <input id="custom-question-input" type="text" placeholder="Question...">
+        <input id="custom-question-input" class="custom-chat-text" type="text" placeholder="Question...">
         <button class="ui button" id="custom-send-button">Send</button>
       </div>
     </div>

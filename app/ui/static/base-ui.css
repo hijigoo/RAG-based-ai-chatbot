@@ -6,6 +6,10 @@
     padding-bottom: 28px;
 }
 
+.custom-chat-text {
+    font-size: 1.4em !important;
+}
+
 .custom-feeds-container {
     flex: 1;
     overflow-y: auto;

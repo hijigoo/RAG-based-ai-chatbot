@@ -4,7 +4,7 @@ function getYouHtml(question) {
       <div class="summary">
         <a>YOU</a>
       </div>
-      <div class="extra text custom-extra-text">
+      <div class="extra text custom-extra-text custom-chat-text">
         ${question}
       </div>
       <div class="meta">
@@ -30,7 +30,7 @@ function getAiHtml(answer, reference_documents, documentIndex) {
       <div class="summary">
         <a>AI</a> <span style="color: #000000;"></span>
       </div>
-      <div class="extra text custom-extra-text">
+      <div class="extra text custom-extra-text custom-chat-text">
         ${answer}
       </div>
       <div class="meta">
@@ -145,7 +145,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // Set input enter event
   let sendButton = document.getElementById('custom-send-button')
   let questionInput = document.getElementById('custom-question-input')
-  questionInput.addEventListener("keyup", function (event) {
+  questionInput.addEventListener("keypress", function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
       sendButton.click();
@@ -170,7 +170,7 @@ window.addEventListener('DOMContentLoaded', function () {
     activeProgress()
     let dropdownMenu = document.getElementById('custom-indices-dropdown-menu')
     let selects = dropdownMenu.getElementsByClassName("selected");
-    let k = 1
+    let k = 5
     if (selects.length > 0) {
       let documentIndex = selects[0].getAttribute('data-value')
       console.log(`${documentIndex} is selected - Call LLM model with Retrieval`)
@@ -225,7 +225,7 @@ window.addEventListener('DOMContentLoaded', function () {
           deleteHtml = `
           <a class="item">
             ${result[idx]}
-            <div class="ui green horizontal label" data-value="${result[idx]}">Fixed</div>
+            <div class="ui green horizontal label" data-value="${result[idx]}">doc-</div>
           </a>
           `
         }
